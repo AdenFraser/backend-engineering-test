@@ -21,7 +21,7 @@ class MedianSpeedTest extends MetricTestCase
     {
         $analysis = new MedianSpeed(self::$dataset);
 
-        $this->assertEquals(101.35, $analysis->result());
+        $this->assertEquals(101.55, $analysis->result());
     }
 
     /**
@@ -41,6 +41,6 @@ class MedianSpeedTest extends MetricTestCase
 
         $analysis = new MedianSpeed($dataset);
 
-        $this->assertEquals(101.57, $analysis->result());
+        $this->assertEquals(101.67, $analysis->result());
     }
 }

@@ -25,8 +25,8 @@ abstract class MetricAnalysis
 
     /**
      * Instantiate the Metric Analysis class with the dataset provided.
-     * 
-     * @param array $dataset 
+     *
+     * @param array $dataset
      */
     public function __construct(array $dataset)
     {
@@ -34,12 +34,12 @@ abstract class MetricAnalysis
     }
 
     /**
-     * Returns the result of an Analysis. 
+     * Returns the result of an Analysis.
      *
      * This is method is currently just an alias for `analyse` but provides an
      * opportunity to perform additional setup tasks post-construct but
      * prior to the analyse method on the child class being called.
-     * 
+     *
      * @return mixed
      */
     public function result()
@@ -56,14 +56,14 @@ abstract class MetricAnalysis
 
     /**
      * Set Dataset for this Metric Analysis.
-     * 
+     *
      * @param array $dataset
      */
     protected function setDataset(array $dataset)
     {
         $this->metrics = collect($dataset)
             // Map through the daily data and format slightly nicer.
-            ->map(function($day) {
+            ->map(function ($day) {
                 return [
                     'date' => new \DateTime($day['dtime']),
                     'value' => $day['metricValue'],
@@ -81,5 +81,5 @@ abstract class MetricAnalysis
     protected function formatBits($bytes, $precision = 2): float
     {
         return round($bytes * 8 / 1000 / 1000, 2);
-    } 
+    }
 }

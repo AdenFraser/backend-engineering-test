@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\Tests\Functional\Command;
 
@@ -7,9 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 /**
- * Class AppAnalyseMetricsCommandTest
- *
- * @package App\Tests\Functional\Command
+ * Class AppAnalyseMetricsCommandTest.
  */
 class AppAnalyseMetricsCommandTest extends KernelTestCase
 {
